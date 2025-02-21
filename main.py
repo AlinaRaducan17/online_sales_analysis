@@ -24,3 +24,8 @@ product_manager.add_product(Product("Caiet", 10.5, 2))
 product_manager.display_products()
 
 print(f"Valoarea totală a inventarului: {product_manager.total_spent()} RON")
+
+product_manager.remove_product("Stilou")
+product_manager.display_products()
+
+ 
