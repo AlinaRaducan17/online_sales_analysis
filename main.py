@@ -1,5 +1,6 @@
 from product_manager import ProductManager
 from product import Product
+from cart import Cart
 
 if __name__ == '__main__':
     products = [
@@ -26,4 +27,11 @@ product_manager.add_product(Product("Caiet", 10.5, 2))
 product_manager.remove_product("Stilou")
 # product_manager.display_products()
 
- 
+cart = Cart()
+cart.add_product_cart(products[0])
+cart.add_product_cart(products[1])
+cart.add_product_cart(products[2])
+    
+print("Cosul contine urmtoarele produse:")
+cart.display_products_cart()
+print(f"Total de plată: {cart.total_spent_cart()} RON")
